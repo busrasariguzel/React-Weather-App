@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import validator from "validator";
+import {isAuthenticated} from '../Helpers/AuthHelpers'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -60,7 +61,7 @@ export default class Signin extends Component {
             <div>
                 <ToastContainer>
                     <div> Sign In</div>
-                    <form onSubmit={{e} => this.onSubmit(e, dispatch)}>
+                    {/* <form onSubmit={{e} => this.onSubmit(e, dispatch)}> */}
                 </ToastContainer>
             </div>
         )

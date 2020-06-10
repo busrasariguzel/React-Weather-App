@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import axios from 'axios';
+import MainRouter from './MainRouter';
+import Spinner from './components/Spinner/Spinner'
 
 
 export default class App extends Component {
@@ -35,9 +38,11 @@ export default class App extends Component {
     
     render() {
         return (
-            <div>
-               app 
-            </div>
+            <Router>
+        <React.Suspense>
+        <MainRouter />
+        </React.Suspense>
+      </Router>
         )
     }
 }
