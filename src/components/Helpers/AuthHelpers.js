@@ -1,4 +1,4 @@
-import Axios from "./Axios";
+import Axios from "axios";
 import Cookies from "js-cookie";
 import jwt_decode from "jwt-decode";
 

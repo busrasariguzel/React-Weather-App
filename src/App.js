@@ -3,6 +3,10 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import axios from 'axios';
 import MainRouter from './MainRouter';
 import Spinner from './components/Spinner/Spinner'
+import Signup from './components/Signup/Signup'
+import Signin from './components/Signin/Signin'
+import Navbar from './components/Navbar/Navbar'
+
 
 
 export default class App extends Component {
@@ -39,6 +43,9 @@ export default class App extends Component {
     render() {
         return (
             <Router>
+                <Navbar />
+        <Signup />
+        {/* <Signin /> */}
         <React.Suspense>
         <MainRouter />
         </React.Suspense>

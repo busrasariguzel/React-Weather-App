@@ -5,7 +5,9 @@ import { Link, NavLink } from 'react-router-dom'
 
 export default class NavBar extends Component {
     render() {
-        return <nav>
+        return <nav style={{
+            
+        }}>
             <NavLink to="/" activeClassName="selected" activeStyle={{fontWeight: 'bold'}} exact>
             home
             </NavLink>
