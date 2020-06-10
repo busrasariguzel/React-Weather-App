@@ -1,4 +1,20 @@
-import React, {Component} from 'react';
+import React, { createContext} from 'react';
 
-export const Context = React.createContext();
+export const Context = createContext();
+
+class ContextProvider extends Component {
+    state = {
+
+    }
+    render (){
+        return (
+<div>
+
+</div>
+        )
+    }
+}
+export default ContextProvider
+
+
 
