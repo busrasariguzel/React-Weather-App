@@ -1,8 +1,14 @@
+/* * {
+  background-position: url('../../assets/weather.jpg') ;
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out
+} */
+
 *{
-    background: pink;
-    font-style: italic;
-  }
-  
+  background-color: pink;
+}
+
   
   .signup-container {
     text-align: center;

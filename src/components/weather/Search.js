@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import EachWeatherData from './EachWeatherData'
-import WeatherSingleData from './WeatherSingleData'
+import WeatherSingleData from './WeatherSingleData';
+import { WeatherContext } from '../Context/ThemeContext'
 
 export default class Search extends Component {
     constructor(props){
@@ -22,6 +23,7 @@ export default class Search extends Component {
         event.preventDefault();
       }
     render() {
+        console.log('weather contetx...', this.context)
         console.log('cityyyy....' , this.state.city)
         console.log('weather.... in searc....', this.props.weatherData)
         console.log(this.props.weatherData)
@@ -29,13 +31,14 @@ export default class Search extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                <input
+                <input className="searchBar"
+                placeholder="Search for a city"
             type="text" 
             onChange={this.handleSubmit}
              value={this.state.city}/>
             <WeatherSingleData  weatherData={this.props.weatherData} city={this.state.city}
                     />
-                    <button type="submit" onSubmit={this.handleSubmit}> Search</button>
+                    {/* <button type="submit" onSubmit={this.handleSubmit}> Get Weather</button> */}
                 </form>
 
                 {/* <div>

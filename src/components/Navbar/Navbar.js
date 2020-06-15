@@ -13,14 +13,14 @@ export default class NavBar extends Component {
 
         }}>
             <NavLink to="/" activeClassName="selected" activeStyle={{fontWeight: 'bold'}} exact>
-            home
-            </NavLink>
+            Home
+            </NavLink> 	&nbsp; 	&nbsp; 	&nbsp;
             <NavLink to="/signin" activeStyle={{fontWeight: 'bold'}} activeClassName="selected" exact>
-                sign in
-            </NavLink>
+                Sign in
+            </NavLink> 	&nbsp; 	&nbsp; 	&nbsp;
             <NavLink to="/signup" activeClassName="selected" activeStyle={{fontWeight: 'bold'}} exact>
-                sign up
-            </NavLink>
+                Sign up
+            </NavLink> 	&nbsp; 	&nbsp; 	&nbsp;
         </nav>
     }
 }

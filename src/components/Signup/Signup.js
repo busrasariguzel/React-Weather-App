@@ -172,11 +172,7 @@ export default class Signup extends Component {
         }
       case "password":
         let validatedPassword = true;
-        //let validatedPassword
-        // validatedPassword = validator.matches(
-        //   inputValue,
-        //   "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
-        // );
+     
 
         if (!validatedPassword) {
           errorState.passwordError.noError = validatedPassword;
@@ -195,15 +191,7 @@ export default class Signup extends Component {
   };
 
   onChange = (event) => {
-    //1. we need to grab the value of our current state
-    //2. but right now our state is in an object. how do we know what to put?
-
-    //spread the state of the formSetting Object
-    //set the value of the state object with event.target.value
-    //
-
-    //use checkInputValidation to verify if input is good
-
+   
     let inputForm = {
       ...this.state.formSetting,
     };

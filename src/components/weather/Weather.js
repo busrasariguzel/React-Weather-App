@@ -14,7 +14,7 @@ export default class Weather extends Component {
     
                 return (
                     <div key={idx}>
-                    hi
+                
                     <EachWeatherData  weatherData={this.state.weatherData} city={this.state.city}
                     item={item} idx={idx}/>
                     

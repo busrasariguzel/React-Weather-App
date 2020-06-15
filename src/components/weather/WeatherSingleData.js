@@ -6,16 +6,11 @@ export default class WeatherSingleData extends Component {
 
     }
     render() {
-        console.log('this . props...', this.props.city)
-        console.log('weather dataa chwck chwck.... ', this.props.weatherData)
         if (this.props.city !== ""){
             if(this.props.weatherData === undefined){
-
-            
-        
         return (
             <div>
-            got it
+        ' '
                 
             
             </div> 
@@ -26,16 +21,24 @@ export default class WeatherSingleData extends Component {
             <div>
                 {this.props.weatherData
 .map((item,idx)=>{
-    console.log('itemmmmmmmm', this.props.weatherData[0].city_name)
                 return (
+                    <div className="container">
+                        <div className="cards">
                     <div key={idx}>
                     
-            <p> city:  {this.props.weatherData[0].city_name} , {this.props.weatherData[0].state_code} </p> 
-            <p> temperature: {this.props.weatherData[0].app_temp} </p>
-            <p> lat {this.props.weatherData[0].lat} </p>
-            <p> long: {this.props.weatherData[0].lon} </p>
-                     
+            <h2> {this.props.weatherData[0].city_name} </h2> 
+            <p className="py-4">  {this.props.weatherData[0].app_temp} C </p>
+            {/* <p> lat {this.props.weatherData[0].lat} </p> */}
+            {/* <p> long: {this.props.weatherData[0].lon} </p> */}
+            <p> {this.props.weatherData[0].weather.description} </p>
+            {/* <icon> {this.props.weatherData[0].weather.code} </icon> */}
+            <div><img src={`https://www.weatherbit.io/static/img/icons/${this.props.weatherData[0].weather.icon}.png`} alt="icon" />
+            {/* <span>Hello {this.props.name}</span> */}
+            </div>
+            {/* <img> src=`https://www.weatherbit.io/static/img/icons/{this.props.weatherData[0].weather.icon}.png` </img> */}
 
+            </div>       
+            </div>
                     </div>
                 )
             }
@@ -47,7 +50,7 @@ export default class WeatherSingleData extends Component {
     else {
         return (
             <div>
-                hi
+                
             </div>
         )
     }

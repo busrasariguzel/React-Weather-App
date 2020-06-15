@@ -1,16 +1,20 @@
 import React, { Component, createContext } from 'react';
-export const ThemeContext = createContext();
+export const WeatherContext = createContext();
 
 
-export default class WeatherContext extends Component {
+export default class WeatherContextProvider extends Component {
     state={
-        
+        hasLocation : false
+
+    }
+    toggleLocation = () => {
+        this.setState({ hasLocation : !this.state.hasLocation})
     }
     render() {
         return (
-            <div>
-                
-            </div>
+           <WeatherContextProvider value={{...this.state, toggleLocation: this.toggleLocation}}>
+                {this.props.children}
+           </WeatherContextProvider>
         )
     }
 }

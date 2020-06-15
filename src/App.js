@@ -5,11 +5,17 @@ import MainRouter from './MainRouter';
 import Spinner from './components/Spinner/Spinner'
 import Signup from './components/Signup/Signup'
 import Signin from './components/Signin/Signin'
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+import './'
 
 import Weather from './components/weather/Weather';
+import Map from './mapboxAndReact/src/index'
 import Search2 from './components/weather/Search'
 import ThemeContextProvider from './components/Context/ThemeContext';
+import WeatherContextProvider from './components/Context/WeatherContext';
+// import photo from './assets/wear'
 
 
 
@@ -64,12 +70,28 @@ export default class App extends Component {
     
     render() {
         return (
+            <div className="app">
             <ThemeContextProvider>
+               
             <Router>
-                <Navbar />
+                <Navbar style= {{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'spaceBetween'
+                }}/>
+                {/* <WeatherContextProvider>  */}
                 <Search2 weatherData={this.state.weatherData} city={this.state.cityState} getWeather={this.getWeather}/>
+                 {/* </WeatherContextProvider> */}
+                
                 {/* <Weather  weatherData={this.state.weatherData}/> */}
-        <Signup />
+                {/* </WeatherContextProvider> */}
+                <div>
+                <Map style= {{
+                    paddingTop: '1000px'
+                }}/>
+                </div>
+
+        {/* <Signup /> */}
         {/* <Signin /> */}
        
         <React.Suspense>
@@ -77,6 +99,7 @@ export default class App extends Component {
         </React.Suspense>
       </Router>
       </ThemeContextProvider>
+      </div>
         )
     }
 }
