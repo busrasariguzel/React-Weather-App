@@ -44,7 +44,6 @@ const reducer = (state, action) => {
       );
     }
   }
-  
   export const Consumer = Context.Consumer;
 
 
