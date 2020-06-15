@@ -10,32 +10,39 @@ class Application extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-        lng: 5,
-        lat: 34,
-        zoom: 2
+        lng: '',
+        lat: '',
+        zoom: 8
         };
         }
+
         componentDidMount() {
             const map = new mapboxgl.Map({
             container: this.mapContainer,
             style: 'mapbox://styles/mapbox/streets-v11',
-            center: [this.state.lng, this.state.lat],
+            center: [this.props.lon, this.props.lat],
             zoom: this.state.zoom
             });
 
             map.on('move', () => {
                 this.setState({
-                lng: map.getCenter().lng.toFixed(4),
-                lat: map.getCenter().lat.toFixed(4),
+                lng: this.props.lon,
+                // map.getCenter().this.props.lon.toFixed(4),
+                lat: this.props.lat,
+                // map.getCenter().this.props.lat.toFixed(4),
                 zoom: map.getZoom().toFixed(2)
                 });
                 });
             }
             render() {
+                console.log('lat...' , this.props.lat)
+                console.log('long...' , this.props.lon)
+                
                 return (
                 <div>
                     <div className='sidebarStyle'>
-                    <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
+                    
+                    <div>Longitude: {this.props.lon} | Latitude: {this.props.lat} | Zoom: {this.state.zoom}</div>
                 <div ref={el => this.mapContainer = el} className="mapContainer" />
                 </div>
                 </div>

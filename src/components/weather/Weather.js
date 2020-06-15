@@ -4,7 +4,12 @@ import EachWeatherData from './EachWeatherData'
 export default class Weather extends Component {
     constructor(props){
         super()
+        this.state = {
+            lat : '',
+            lon: ''
+        }
     }
+    
     render() {
         console.log(this.props.weatherData)
         return (

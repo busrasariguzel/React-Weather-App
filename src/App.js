@@ -80,18 +80,19 @@ export default class App extends Component {
                     justifyContent: 'spaceBetween'
                 }}/>
                 {/* <WeatherContextProvider>  */}
-                <Search2 weatherData={this.state.weatherData} city={this.state.cityState} getWeather={this.getWeather}/>
+                <Search2 style={{paddingRight:'0px'}}
+                weatherData={this.state.weatherData} city={this.state.cityState} getWeather={this.getWeather}/>
                  {/* </WeatherContextProvider> */}
                 
                 {/* <Weather  weatherData={this.state.weatherData}/> */}
                 {/* </WeatherContextProvider> */}
-                <div>
-                <Map style= {{
+                <div><br /><br />
+                {/* <Map style= {{
                     paddingTop: '1000px'
-                }}/>
+                }}/> */}
                 </div>
 
-        {/* <Signup /> */}
+        <Signup />
         {/* <Signin /> */}
        
         <React.Suspense>
