@@ -1,15 +1,18 @@
 /* * {
-  background-position: url('../../assets/weather.jpg') ;
-  background-size: cover;
-  background-position: bottom;
-  transition: 0.4 ease-out
-} */
+  background-image: url('../../assets/weather.jpg') ;
+  /* background-size: cover; */
+  /* background-position: bottom;
+  transition: 0.4 ease-out */
+/* } */ */
 
 *{
   background-color: pink;
 }
 
-  
+body {
+  background-color: pink
+}
+
   .signup-container {
     text-align: center;
   }

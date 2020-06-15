@@ -35,7 +35,7 @@ export default class App extends Component {
     getWeather = (
         cityState
         ) => {
-        axios.get(`https://api.weatherbit.io/v2.0/current?city=${cityState}&key=a8475107fdf1405786271982ea7db651`, {
+        axios.get(`https://api.weatherbit.io/v2.0/current?city=${cityState}&key=b9ec9dd8d9004ecd9cf4c6ef52f6d8f8`, {
         "method": "GET",
     })
     .then(response => {
@@ -72,13 +72,15 @@ export default class App extends Component {
         return (
             <div className="app">
             <ThemeContextProvider>
-               
+               <h3> Welcome to our weather app. 
+                   Search your city to start.</h3>
             <Router>
-                <Navbar style= {{
+                {/* <h1>Weather </h1> */}
+                {/* <Navbar style= {{
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'spaceBetween'
-                }}/>
+                }}/> */}
                 {/* <WeatherContextProvider>  */}
                 <Search2 style={{paddingRight:'0px'}}
                 weatherData={this.state.weatherData} city={this.state.cityState} getWeather={this.getWeather}/>
